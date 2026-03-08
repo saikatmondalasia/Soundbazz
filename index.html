@@ -13,9 +13,12 @@
             --accent-red: #e11d48; /* Rose 600 */
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body { 
             font-family: 'Inter', sans-serif; 
-            scroll-behavior: smooth; 
             background-color: var(--bg-dark); 
             color: #d4d4d8; 
             overflow-x: hidden;
@@ -128,34 +131,46 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen lg:min-h-0 lg:h-[90vh] flex items-center pt-32 lg:pt-20 pb-12 lg:pb-0 overflow-hidden">
+    <section class="relative min-h-[100dvh] lg:min-h-0 lg:h-[90vh] flex flex-col lg:justify-center pt-32 lg:pt-20 pb-16 lg:pb-0 overflow-hidden">
         <!-- Hero Background Image -->
         <div class="absolute inset-0 z-[-1] image-mask opacity-100">
-            <img src="https://i.ibb.co/60WNKSsB/sir-holding-harmonica.webp" alt="Sound Bazz Main" class="w-full h-full object-cover slow-zoom" style="object-position: 0% 20%;">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#050507]/90 via-[#050507]/40 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent"></div>
+            <picture>
+                <source media="(min-width: 1024px)" srcset="https://i.ibb.co/60WNKSsB/sir-holding-harmonica.webp">
+                <img src="https://i.ibb.co/WNyx5yt3/top1.jpg" alt="Sound Bazz Main" class="w-full h-full object-cover object-[50%_0%] lg:object-[0%_20%] slow-zoom">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#050507] via-[#050507]/80 lg:from-[#050507]/90 lg:via-[#050507]/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent hidden lg:block"></div>
         </div>
         
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full relative z-10 grid lg:grid-cols-2 gap-12 items-center mt-auto lg:mt-0">
             <div>
-                <div class="inline-block border border-rose-500/20 bg-rose-600/20 backdrop-blur-md px-5 py-2 rounded-full mb-6 mt-4 lg:mt-0 shadow-[0_0_15px_rgba(225,29,72,0.2)]">
-                    <span class="text-rose-200 font-bold tracking-[0.15em] text-xs uppercase">Premium Harmonica Lessons & Gear</span>
+                <div class="inline-block border border-rose-500/20 bg-rose-600/20 backdrop-blur-md px-5 py-2 rounded-full mb-4 shadow-[0_0_15px_rgba(225,29,72,0.2)] lg:mt-0">
+                    <span class="text-rose-200 font-bold tracking-[0.15em] text-[10px] sm:text-xs uppercase">Premium Harmonica Lessons & Gear</span>
                 </div>
-                <h1 class="text-5xl md:text-6xl lg:text-[4.5rem] font-bold leading-[1.1] mb-5 hero-gradient-text">
+                <h1 class="text-4xl md:text-6xl lg:text-[4.5rem] font-bold leading-[1.1] mb-3 md:mb-5 hero-gradient-text">
                     MASTER THE <br>
                     <span class="text-rose-600 glow-text" style="background: none; -webkit-text-fill-color: #e11d48;">HARMONICA.</span><br>
                     OWN THE BEST.
                 </h1>
-                <p class="text-base text-zinc-400 mb-8 max-w-xl font-light leading-relaxed">
+                <p class="text-sm md:text-base text-zinc-400 mb-6 md:mb-8 max-w-xl font-light leading-relaxed">
                     Elite private coaching and an exclusive premium harmonica collection at Sound Bazz. Master your craft with confidence, available 24/7 in Suri.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-5">
-                    <a href="tel:08436390412" class="btn-primary px-10 py-4 text-sm font-bold uppercase tracking-[0.2em] rounded-full text-center flex items-center justify-center gap-3">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:08436390412" class="btn-primary w-full sm:w-auto px-10 py-4 text-[11px] sm:text-sm font-bold uppercase tracking-[0.2em] rounded-full text-center flex items-center justify-center gap-3">
                         Call Now
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
-                    <a href="#contact" class="glass-card px-10 py-4 text-sm font-bold uppercase tracking-[0.2em] rounded-full text-white hover:bg-white/5 transition-colors text-center">
+                    <a href="#contact" class="btn-primary w-full sm:w-auto px-10 py-4 text-[11px] sm:text-sm font-bold uppercase tracking-[0.2em] rounded-full text-center flex items-center justify-center gap-3">
                         Book Appointment
+                    </a>
+                </div>
+                <!-- Additional Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mt-4">
+                    <a href="#learn-harmonica-service" class="glass-card w-full sm:w-auto px-10 py-4 text-[11px] sm:text-sm font-bold uppercase tracking-[0.2em] rounded-full text-white hover:bg-white/5 transition-colors text-center border border-rose-500/50 hover:border-rose-500">
+                        Learn Harmonica
+                    </a>
+                    <a href="#buy-harmonica-service" class="glass-card w-full sm:w-auto px-10 py-4 text-[11px] sm:text-sm font-bold uppercase tracking-[0.2em] rounded-full text-white hover:bg-white/5 transition-colors text-center border border-rose-500/50 hover:border-rose-500">
+                        Buy Harmonica
                     </a>
                 </div>
             </div>
@@ -180,7 +195,7 @@
             
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Learn Service -->
-                <a href="classes.html" class="block glass-card rounded-3xl p-10 hover-glow transition-all duration-500 group">
+                <a href="classes.html" id="learn-harmonica-service" class="block glass-card rounded-3xl p-10 hover-glow transition-all duration-500 group hover:border-rose-500">
                     <div class="w-16 h-16 rounded-2xl bg-zinc-800/50 flex items-center justify-center mb-8 border border-zinc-700/50 group-hover:bg-rose-500/20 group-hover:border-rose-500/30 transition-colors">
                         <svg class="w-8 h-8 text-white group-hover:text-rose-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
                     </div>
@@ -195,7 +210,7 @@
                 </a>
 
                 <!-- Buy Service -->
-                <a href="products.html" class="block glass-card rounded-3xl p-10 hover-glow transition-all duration-500 group">
+                <a href="products.html" id="buy-harmonica-service" class="block glass-card rounded-3xl p-10 hover-glow transition-all duration-500 group hover:border-rose-500">
                     <div class="w-16 h-16 rounded-2xl bg-zinc-800/50 flex items-center justify-center mb-8 border border-zinc-700/50 group-hover:bg-rose-500/20 group-hover:border-rose-500/30 transition-colors">
                         <svg class="w-8 h-8 text-white group-hover:text-rose-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
                     </div>
@@ -358,16 +373,40 @@
             </div>
             
             <div class="glass-card p-1 rounded-3xl inline-block w-full max-w-4xl shadow-2xl">
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl h-[400px] flex items-center justify-center flex-col relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-500"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 to-transparent"></div>
-                    
-                    <div class="relative z-10 text-center p-8 mt-auto">
-                        <div class="w-12 h-12 bg-rose-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_15px_rgba(225,29,72,0.5)]">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden relative">
+                    <!-- Map Header -->
+                    <div class="flex items-center gap-4 p-5 border-b border-zinc-800">
+                        <div class="w-10 h-10 bg-rose-600 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(225,29,72,0.5)] flex-shrink-0">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         </div>
-                        <h4 class="text-white text-xl font-bold mb-2">Visit Our Store</h4>
-                        <p class="text-zinc-400 font-light">Subhash pally, Near Bajaj Showroom Suri, Birbhum, WB - 731101</p>
+                        <div class="flex-1 text-left">
+                            <h4 class="text-white text-base font-bold">Visit Our Store</h4>
+                            <p class="text-zinc-400 text-sm font-light">Subhash Pally, Near Bajaj Showroom, Suri, Birbhum, WB - 731101</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/maJCgjqdj32YmjJK7" target="_blank" rel="noopener noreferrer"
+                           class="btn-primary flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-xs font-bold uppercase tracking-[0.15em] flex-shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            Open in Maps
+                        </a>
+                    </div>
+                    <!-- Embedded Google Map -->
+                    <div class="relative h-[360px] w-full">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.5843093068264!2d87.52149517529554!3d23.916748178671566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f9b3e09d02e40b%3A0x5e7fd7d5e3e6c2b5!2sSuri%2C+West+Bengal+731101!5e0!3m2!1sen!2sin!4v1709900000000!5m2!1sen!2sin"
+                            width="100%"
+                            height="100%"
+                            style="border:0; filter: grayscale(30%) invert(10%) contrast(1.1);"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Sound Bazz Store Location">
+                        </iframe>
+                        <!-- Overlay click-to-open -->
+                        <a href="https://maps.app.goo.gl/maJCgjqdj32YmjJK7" target="_blank" rel="noopener noreferrer"
+                           class="absolute bottom-4 left-1/2 -translate-x-1/2 glass-card flex items-center gap-2 px-6 py-3 rounded-full text-white text-xs font-bold uppercase tracking-[0.15em] hover:bg-white/10 transition-all duration-300 shadow-xl border border-rose-500/30 hover:border-rose-500/60">
+                            <svg class="w-4 h-4 text-rose-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            Get Directions on Google Maps
+                        </a>
                     </div>
                 </div>
             </div>
