@@ -179,9 +179,17 @@
         }
 
         @keyframes bounceX {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(4px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(4px);
+            }
         }
+
         .animate-bounce-x {
             animation: bounceX 1s ease-in-out infinite;
         }
@@ -222,6 +230,12 @@
                 <a href="#about"
                     class="text-xs font-semibold text-zinc-400 hover:text-white transition-colors uppercase tracking-[0.2em] relative group">
                     About
+                    <span
+                        class="absolute -bottom-2 left-0 w-0 h-px bg-rose-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#founder"
+                    class="text-xs font-semibold text-zinc-400 hover:text-white transition-colors uppercase tracking-[0.2em] relative group">
+                    Founder
                     <span
                         class="absolute -bottom-2 left-0 w-0 h-px bg-rose-500 transition-all duration-300 group-hover:w-full"></span>
                 </a>
@@ -266,6 +280,8 @@
                 class="mobile-link text-2xl font-light text-white uppercase tracking-[0.2em] hover:text-rose-500 transition-colors">Products</a>
             <a href="#about"
                 class="mobile-link text-2xl font-light text-white uppercase tracking-[0.2em] hover:text-rose-500 transition-colors">About</a>
+            <a href="#founder"
+                class="mobile-link text-2xl font-light text-white uppercase tracking-[0.2em] hover:text-rose-500 transition-colors">Founder</a>
             <a href="#testimonials"
                 class="mobile-link text-2xl font-light text-white uppercase tracking-[0.2em] hover:text-rose-500 transition-colors">Reviews</a>
             <a href="#contact"
@@ -327,7 +343,8 @@
                             </div>
                             <h4
                                 class="text-[18px] md:text-[22px] lg:text-[24px] font-extrabold text-white mb-3 brand-font leading-tight uppercase tracking-wide">
-                                <span class="text-rose-500">HARMONICA</span> PATSHALA</h4>
+                                <span class="text-rose-500">HARMONICA</span> PATSHALA
+                            </h4>
                             <div
                                 class="inline-flex items-center text-[9px] md:text-[10px] font-bold text-white uppercase tracking-[0.15em] group-hover:text-rose-400 transition-colors">
                                 EXPLORE PATSHALA <span
@@ -358,7 +375,8 @@
                             </div>
                             <h4
                                 class="text-[18px] md:text-[22px] lg:text-[24px] font-extrabold text-white mb-3 brand-font leading-tight uppercase tracking-wide">
-                                <span class="text-rose-500">HARMONICA</span> STORE</h4>
+                                <span class="text-rose-500">HARMONICA</span> STORE
+                            </h4>
                             <div
                                 class="inline-flex items-center text-[9px] md:text-[10px] font-bold text-white uppercase tracking-[0.15em] group-hover:text-rose-400 transition-colors">
                                 VIEW STORE <span
@@ -390,7 +408,8 @@
                             </div>
                             <h4
                                 class="text-[18px] md:text-[22px] lg:text-[24px] font-extrabold text-white mb-3 brand-font leading-tight uppercase tracking-wide">
-                                <span class="text-rose-500">HARMONICA</span> REPAIR</h4>
+                                <span class="text-rose-500">HARMONICA</span> REPAIR
+                            </h4>
                             <div
                                 class="inline-flex items-center text-[9px] md:text-[10px] font-bold text-white uppercase tracking-[0.15em] group-hover:text-rose-400 transition-colors">
                                 GET REPAIR <span
@@ -474,7 +493,8 @@
                             Legacy</span>
                     </div>
                     <h2 class="text-4xl md:text-5xl lg:text-6xl text-white mb-8 brand-font font-light">ELEVATING
-                        <br><span class="font-bold">MUSIC IN INDIA</span></h2>
+                        <br><span class="font-bold">MUSIC IN INDIA</span>
+                    </h2>
 
                     <div class="space-y-6 text-zinc-400 font-light text-lg">
                         <p>
@@ -507,9 +527,431 @@
         </div>
     </section>
 
+    <!-- Meet the Founder Section -->
+    <section id="founder" class="py-16 md:py-24 lg:py-32 relative overflow-hidden border-t border-zinc-800/30">
+        <!-- Background watermark/decorative element -->
+        <div
+            class="absolute left-0 top-1/2 -translate-y-1/2 font-black text-[18vw] text-zinc-900/30 select-none pointer-events-none whitespace-nowrap brand-font z-0">
+            FOUNDER
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="flex flex-col items-center text-center mb-16 md:mb-20">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-px bg-rose-500"></div>
+                    <span class="text-rose-500 font-bold tracking-[0.3em] uppercase text-xs">Visionary &amp;
+                        Educator</span>
+                    <div class="w-8 h-px bg-rose-500"></div>
+                </div>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl text-white brand-font font-light">
+                    MEET THE <span class="font-bold text-rose-500">FOUNDER</span>
+                </h2>
+                <p class="text-zinc-400 mt-4 max-w-2xl font-light text-base md:text-lg">
+                    The musician, educator, and entrepreneur behind SoundBazz and Harmonica Pathshala.
+                </p>
+            </div>
+
+            <!-- Founder Profile Block (Grid: Image Left, Bio & Highlights Right) -->
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20 md:mb-28">
+                <!-- Left Column: Image & Badges -->
+                <div class="lg:col-span-5 relative">
+                    <div
+                        class="relative rounded-3xl overflow-hidden glass-card p-3 transform -rotate-1 hover:rotate-0 transition-transform duration-700 shadow-2xl">
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-zinc-900">
+                            <img src="https://i.ibb.co/spXfpfKZ/Whats-App-Image-2026-08-09-at-1-13-56-PM.jpg"
+                                alt="Subham Mukherjee - Founder of SoundBazz"
+                                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                            </div>
+
+                            <!-- Badges Overlay on Image -->
+                            <div class="absolute bottom-6 left-6 right-6 space-y-2">
+                                <div
+                                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-600/90 backdrop-blur-md border border-rose-400/30 text-white text-xs font-bold uppercase tracking-wider shadow-lg">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                    </svg>
+                                    Founder &amp; Primary Mentor — SoundBazz
+                                </div>
+                                <div
+                                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 backdrop-blur-md border border-zinc-700/60 text-zinc-300 text-xs font-semibold uppercase tracking-wider shadow-lg">
+                                    <svg class="w-3.5 h-3.5 text-rose-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 14l9-5-9-5-9 5 9 5z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                    </svg>
+                                    Founder — Harmonica Pathshala
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decorative Harmonica Soundwave / Glow -->
+                    <div
+                        class="absolute -bottom-6 -left-6 w-32 h-32 bg-rose-600/10 rounded-full blur-3xl pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute -top-6 -right-6 w-32 h-32 bg-rose-600/10 rounded-full blur-3xl pointer-events-none">
+                    </div>
+                </div>
+
+                <!-- Right Column: Name, Bio & Quick Stats -->
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-px bg-rose-500"></div>
+                        <span class="text-rose-500 font-bold tracking-[0.25em] uppercase text-xs">Master Harmonica
+                            Artist</span>
+                    </div>
+
+                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white brand-font tracking-tight mb-2">
+                        Subham Mukherjee
+                    </h3>
+                    <p class="text-rose-400 font-medium text-sm md:text-base tracking-wide uppercase mb-6">
+                        Musician • Educator • Customized Instrument Specialist
+                    </p>
+
+                    <!-- Biography Paragraphs -->
+                    <div class="space-y-4 text-zinc-300 font-light text-base md:text-lg leading-relaxed mb-8">
+                        <p>
+                            Subham Mukherjee is an acclaimed Indian harmonica (mouth organ) player, educator, and
+                            entrepreneur. He is the founder and primary mentor of <strong
+                                class="text-white font-semibold">SoundBazz</strong> and its educational wing, <strong
+                                class="text-white font-semibold">Harmonica Pathshala</strong>—a premier platform
+                            dedicated to professional harmonica training, retail, and instrument customization across
+                            India.
+                        </p>
+                        <p>
+                            With nearly six years of dedicated teaching experience, Subham has mentored over 100
+                            students nationwide, establishing a thriving community of mouth organ enthusiasts and
+                            elevated standards of musical excellence.
+                        </p>
+                    </div>
+
+                    <!-- Key Metrics / Stats Row -->
+                    <div
+                        class="grid grid-cols-3 gap-4 p-5 rounded-2xl glass-card border border-rose-500/20 bg-rose-950/10">
+                        <div class="text-center border-r border-zinc-800/80 pr-2">
+                            <div class="text-2xl md:text-3xl font-extrabold text-white brand-font">6+</div>
+                            <div class="text-[11px] md:text-xs text-zinc-400 font-medium uppercase tracking-wider mt-1">
+                                Years Teaching</div>
+                        </div>
+                        <div class="text-center border-r border-zinc-800/80 pr-2">
+                            <div class="text-2xl md:text-3xl font-extrabold text-rose-500 brand-font">100+</div>
+                            <div class="text-[11px] md:text-xs text-zinc-400 font-medium uppercase tracking-wider mt-1">
+                                Students Mentored</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl md:text-3xl font-extrabold text-white brand-font">Pan-India</div>
+                            <div class="text-[11px] md:text-xs text-zinc-400 font-medium uppercase tracking-wider mt-1">
+                                Community Reach</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Highlights & Achievements Cards Grid -->
+            <div class="mb-20 md:mb-28">
+                <div class="flex flex-col items-center text-center mb-12">
+                    <span class="text-rose-500 font-bold tracking-[0.25em] uppercase text-xs mb-2">Milestones</span>
+                    <h3 class="text-2xl md:text-3xl font-bold text-white brand-font">Key Highlights &amp; Achievements
+                    </h3>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                    <!-- Achievement 1: Distinguished Performer -->
+                    <article
+                        class="glass-card p-8 rounded-3xl hover-glow transition-all duration-500 flex flex-col justify-between group">
+                        <div>
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-rose-600/10 border border-rose-500/30 flex items-center justify-center text-rose-500 mb-6 group-hover:bg-rose-600 group-hover:text-white transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-white brand-font mb-3">Distinguished Performer</h4>
+                            <p class="text-zinc-400 font-light text-sm leading-relaxed">
+                                Subham has performed extensively across India. In 2019, he proudly represented his
+                                university at the National Zonal level competing in the <strong
+                                    class="text-zinc-200 font-medium">Western Instrumental Solo</strong> category.
+                            </p>
+                        </div>
+                        <div
+                            class="mt-6 pt-4 border-t border-zinc-800/60 text-xs font-semibold text-rose-400 uppercase tracking-widest flex items-center gap-1.5">
+                            <span>National Zonal Finalist</span>
+                        </div>
+                    </article>
+
+                    <!-- Achievement 2: Community Leader -->
+                    <article
+                        class="glass-card p-8 rounded-3xl hover-glow transition-all duration-500 flex flex-col justify-between group">
+                        <div>
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-rose-600/10 border border-rose-500/30 flex items-center justify-center text-rose-500 mb-6 group-hover:bg-rose-600 group-hover:text-white transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-white brand-font mb-3">Community Leader</h4>
+                            <p class="text-zinc-400 font-light text-sm leading-relaxed">
+                                He has organized numerous state-level and national-level harmonica meets, masterclasses,
+                                and interactive workshops, uniting mouth organ enthusiasts from diverse backgrounds.
+                            </p>
+                        </div>
+                        <div
+                            class="mt-6 pt-4 border-t border-zinc-800/60 text-xs font-semibold text-rose-400 uppercase tracking-widest flex items-center gap-1.5">
+                            <span>Workshops &amp; Meets</span>
+                        </div>
+                    </article>
+
+                    <!-- Achievement 3: Digital Creator -->
+                    <article
+                        class="glass-card p-8 rounded-3xl hover-glow transition-all duration-500 flex flex-col justify-between group">
+                        <div>
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-rose-600/10 border border-rose-500/30 flex items-center justify-center text-rose-500 mb-6 group-hover:bg-rose-600 group-hover:text-white transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-white brand-font mb-3">Digital Creator</h4>
+                            <p class="text-zinc-400 font-light text-sm leading-relaxed mb-4">
+                                Through his YouTube channel, <strong class="text-white font-medium">SoundBazz -
+                                    हार्मोनिका पाठशाला</strong>, he shares soulful Bollywood instrumental covers and
+                                masterclass demonstrations including:
+                            </p>
+                            <ul class="text-xs text-zinc-300 space-y-1.5 italic pl-2 border-l-2 border-rose-500/50">
+                                <li>• Tujhse Naraz Nahi Zindagi</li>
+                                <li>• Tere Bina Zindagi</li>
+                                <li>• Kuch Na Kaho</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="mt-6 pt-4 border-t border-zinc-800/60 text-xs font-semibold text-rose-400 uppercase tracking-widest flex items-center gap-1.5">
+                            <span>YouTube Creator</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- "What He Does" Section -->
+            <div>
+                <div class="flex flex-col items-center text-center mb-12">
+                    <span class="text-rose-500 font-bold tracking-[0.3em] uppercase text-xs mb-2">Dual Expertise</span>
+                    <h3 class="text-3xl md:text-4xl text-white brand-font font-light">
+                        WHAT HE <span class="font-bold text-white">DOES</span>
+                    </h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Column 1: Harmonica Education -->
+                    <div
+                        class="glass-card p-8 md:p-10 rounded-3xl border border-rose-500/20 relative overflow-hidden flex flex-col justify-between">
+                        <div
+                            class="absolute -right-8 -top-8 w-32 h-32 bg-rose-500/10 rounded-full blur-2xl pointer-events-none">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-rose-600/20 border border-rose-500/40 flex items-center justify-center text-rose-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-white brand-font">1. Harmonica Education</h4>
+                                    <p class="text-xs text-rose-400 uppercase tracking-wider font-semibold">Harmonica
+                                        Pathshala</p>
+                                </div>
+                            </div>
+                            <p class="text-zinc-400 font-light text-sm leading-relaxed mb-6">
+                                Through interactive online 1-on-1 classes and structured YouTube tutorials, Subham
+                                trains harmonica players ranging from complete novices to advanced musicians.
+                            </p>
+
+                            <h5 class="text-xs font-bold text-zinc-300 uppercase tracking-widest mb-4">Core Curriculum
+                                Covered:</h5>
+                            <ul class="grid sm:grid-cols-2 gap-2.5 text-xs text-zinc-300 font-light">
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Breathing techniques
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Posture &amp; fundamentals
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Tongue blocking
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Tongue slapping
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Bending techniques
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Rhythm training
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Metronome practice
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Beginner to Advanced
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-zinc-800/60">
+                            <a href="harmonica-classes-for-everyone.html"
+                                class="inline-flex items-center text-xs font-bold text-white uppercase tracking-widest hover:text-rose-400 transition-colors group">
+                                Learn With Subham <span
+                                    class="ml-2 text-rose-500 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Retail, Customization & Repairs -->
+                    <div
+                        class="glass-card p-8 md:p-10 rounded-3xl border border-zinc-800/80 relative overflow-hidden flex flex-col justify-between">
+                        <div
+                            class="absolute -right-8 -top-8 w-32 h-32 bg-zinc-800/20 rounded-full blur-2xl pointer-events-none">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center text-rose-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-white brand-font">2. Retail, Customization &amp;
+                                        Repairs</h4>
+                                    <p class="text-xs text-zinc-400 uppercase tracking-wider font-semibold">SoundBazz
+                                        Store • Suri, Birbhum</p>
+                                </div>
+                            </div>
+                            <p class="text-zinc-400 font-light text-sm leading-relaxed mb-6">
+                                Based in Suri, Birbhum (West Bengal), SoundBazz Store supplies authentic instruments and
+                                expert technical care to harmonica players nationwide.
+                            </p>
+
+                            <h5 class="text-xs font-bold text-zinc-300 uppercase tracking-widest mb-4">Services &amp;
+                                Offerings:</h5>
+                            <ul class="grid sm:grid-cols-2 gap-2.5 text-xs text-zinc-300 font-light">
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Expert instrument selection
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Easttop, JDR, Suzuki, Hohner
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Harmonica maintenance
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Precision reed tuning
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Expert repair services
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Instrument customization
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-zinc-800/60">
+                            <a href="best-harmonica-for-all.html"
+                                class="inline-flex items-center text-xs font-bold text-white uppercase tracking-widest hover:text-rose-400 transition-colors group">
+                                Explore Store &amp; Services <span
+                                    class="ml-2 text-rose-500 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Testimonials -->
-    <section id="testimonials"
-        class="py-16 md:py-24 lg:py-32 bg-zinc-900/20 border-t border-zinc-800/30">
+    <section id="testimonials" class="py-16 md:py-24 lg:py-32 bg-zinc-900/20 border-t border-zinc-800/30">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-12 md:mb-16 relative">
                 <div class="flex flex-col items-center text-center md:items-start md:text-left">
@@ -537,10 +979,15 @@
             </div>
 
             <!-- Mobile swipe hint -->
-            <div class="flex md:hidden items-center justify-center gap-2 mb-5 text-zinc-500 text-xs font-medium tracking-wider">
-                <svg class="w-4 h-4 animate-bounce-x" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div
+                class="flex md:hidden items-center justify-center gap-2 mb-5 text-zinc-500 text-xs font-medium tracking-wider">
+                <svg class="w-4 h-4 animate-bounce-x" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
                 Swipe to see more reviews
-                <svg class="w-4 h-4 animate-bounce-x" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                <svg class="w-4 h-4 animate-bounce-x" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
             </div>
 
             <div id="reviews-scroll-container"
