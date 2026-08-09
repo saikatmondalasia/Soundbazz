@@ -24,6 +24,7 @@
     }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="products-data.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap');
         :root { --bg-dark: #050507; --accent-red: #e11d48; }
@@ -142,41 +143,9 @@
 
             const PHONE_SVG = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>`;
             const WA_SVG = `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
+            const INFO_SVG = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
 
-            const products = [
-              // Easttop
-              { name:'Easttop ET12(₹6800 - ₹7200)',             img:'https://i.ibb.co/KcSJdZGv/ET-12.jpg',                    badge:'Chromatic',  badgeColor:'bg-zinc-700',   brand:'easttop' },
-              { name:'Easttop Forerunner 2.0(₹4500 - ₹4800)',   img:'https://i.ibb.co/ZRyV72fj/Easttop-Forerunner-2-0.webp',         badge:'Chromatic',  badgeColor:'bg-zinc-700',   brand:'easttop' },
-              { name:'Easttop King Dream(₹5800 - ₹6200)',       img:'https://i.ibb.co/sd38BYRh/Easttop-King-Dream.jpg',              badge:'Premium',    badgeColor:'bg-rose-700',   brand:'easttop' },
-              { name:'Easttop Forerunner(₹3700 - ₹3900)',       img:'https://i.ibb.co/Kj5F5Shh/Easttop-Forerunner.jpg',             badge:'Chromatic',  badgeColor:'bg-zinc-700',   brand:'easttop' },
-
-              // Hohner
-              { name:'Hohner 37 Keys Melodica',                 img:'https://i.ibb.co/rG2CT24T/Hohner-37-keys-melodica.jpg',        badge:'Melodica',   badgeColor:'bg-blue-700',   brand:'hohner' },
-              { name:'Hohner 260 Super Chromonica(₹17500 - ₹18500)', img:'https://i.ibb.co/gFrGVHzf/Hohner-260-Super-Chromonica.jpg', badge:'Chromatic', badgeColor:'bg-zinc-700',   brand:'hohner' },
-              { name:'Hohner 270 Deluxe(₹24000 - ₹25000)',      img:'https://i.ibb.co/VchNvcfY/Hohner-270-Deluxe.jpg',              badge:'Professional',badgeColor:'bg-amber-700', brand:'hohner' },
-              { name:'Hohner CX12(₹21000 - ₹22000)',            img:'https://i.ibb.co/9Hdct2FB/Hohner-Cx12.jpg',                    badge:'Chromatic',  badgeColor:'bg-zinc-700',   brand:'hohner' },
-              { name:'Hohner Super 64',                          img:'https://i.ibb.co/6cCNY83X/Hohner-Super-64.jpg',                badge:'Pro Series', badgeColor:'bg-rose-700',   brand:'hohner' },
-
-              // Seydel
-              { name:'Seydel Deluxe(₹33000 - ₹34000)',          img:'https://i.ibb.co/wZSDDCkM/Chro-De-Luxe-STEEL-Etui-700-72-1.jpg', badge:'Chromatic', badgeColor:'bg-zinc-700',   brand:'seydel' },
-              { name:'Seydel Saxony(₹39000 - ₹41000)',          img:'https://i.ibb.co/xKrr5rLR/Saxony.png',                          badge:'Chromatic',  badgeColor:'bg-zinc-700',   brand:'seydel' },
-              { name:'Seydel Non-Slider Chromatic',              img:'https://i.ibb.co/PzQrv5sZ/Seydel-Non-slider-chromatic.jpg',   badge:'Chromatic',  badgeColor:'bg-zinc-700',   brand:'seydel' },
-              { name:'Seydel Symphony',                          img:'https://i.ibb.co/Xf2B4ft4/Seydey-Symphony.jpg',                badge:'Premium',    badgeColor:'bg-rose-700',   brand:'seydel' },
-
-              // Suzuki
-              { name:'Suzuki 32 Keys Melodica',                 img:'https://i.ibb.co/FkQkrGxz/Suzuki-32-keys-Melodica.jpg',       badge:'Melodica',   badgeColor:'bg-blue-700',   brand:'suzuki' },
-              { name:'Suzuki SCX64(₹19000 - ₹19500)',           img:'https://i.ibb.co/zhVg6Zpm/4333suzuki-scx-64-chromatic-harmonica-2.jpg', badge:'Chromatic', badgeColor:'bg-zinc-700', brand:'suzuki' },
-              { name:'Suzuki SCX48',                             img:'https://i.ibb.co/q3bG5bdt/Suzuki-Scx48.jpg',                   badge:'Chromatic',  badgeColor:'bg-zinc-700',   brand:'suzuki' },
-
-              // JDR Products
-              { name:'JDR GM-0648(₹9000 - ₹9500)',               img:'https://i.ibb.co/yFXsWgj2/71pdz-Y8-Vi9-L-AC-UF1000-1000-QL80.jpg', badge:'Chromatic', badgeColor:'bg-zinc-700', brand:'jdr' },
-              { name:'TROCHILUS (₹10500 - ₹11000)',              img:'https://i.ibb.co/4wLTvTgZ/Whats-App-Image-2026-08-09-at-1-15-43-PM.jpg', badge:'Chromatic', badgeColor:'bg-zinc-700', brand:'jdr' },
-
-              // Soundbazz Special Products / Accessories
-              { name:'Harmonica Bag',                            img:'https://i.ibb.co/B2yhV1Xs/Harmonica-bag.jpg',                  badge:'Accessory',  badgeColor:'bg-emerald-700',brand:'special' },
-              { name:'Harmonica Case',                           img:'https://i.ibb.co/TBWZ882B/Harmonica-case.jpg',                 badge:'Accessory',  badgeColor:'bg-emerald-700',brand:'special' },
-              { name:'Leather Harmonica Case',                   img:'https://i.ibb.co/q32fBv0z/leather-harmonica-case.jpg',        badge:'Accessory',  badgeColor:'bg-emerald-700',brand:'special' },
-            ];
+            const productsList = Object.values(products).filter(p => !p.id.includes("keys-melodica") && p.id !== "trochilus" && p.id !== "hohner-260-super-chromonica");
 
             const brands = [
                 { name: 'Easttop', brandId: 'easttop', img: 'https://i.ibb.co/KcSJdZGv/ET-12.jpg' },
@@ -194,12 +163,12 @@
 
             function getBrandProducts(brandId) {
                 if (brandId === 'jdr') {
-                    return products.filter(p => p.brand === 'jdr' || p.name.toLowerCase().includes('jdr') || p.name.toLowerCase().includes('trochilus'));
+                    return productsList.filter(p => p.brandId === 'jdr' || p.name.toLowerCase().includes('jdr') || p.name.toLowerCase().includes('trochilus'));
                 }
                 if (brandId === 'special') {
-                    return products.filter(p => p.brand === 'special' || (p.brand !== 'jdr' && !p.name.toLowerCase().includes('jdr') && !p.name.toLowerCase().includes('trochilus') && !p.name.toLowerCase().includes('easttop') && !p.name.toLowerCase().includes('cascha') && !p.name.toLowerCase().includes('hohner') && !p.name.toLowerCase().includes('seydel') && !p.name.toLowerCase().includes('suzuki')));
+                    return productsList.filter(p => p.brandId === 'special' || (p.brandId !== 'jdr' && !p.name.toLowerCase().includes('jdr') && !p.name.toLowerCase().includes('trochilus') && !p.name.toLowerCase().includes('easttop') && !p.name.toLowerCase().includes('cascha') && !p.name.toLowerCase().includes('hohner') && !p.name.toLowerCase().includes('seydel') && !p.name.toLowerCase().includes('suzuki')));
                 }
-                return products.filter(p => p.brand === brandId || p.name.toLowerCase().includes(brandId));
+                return productsList.filter(p => p.brandId === brandId || p.brand.toLowerCase() === brandId.toLowerCase() || p.name.toLowerCase().includes(brandId.toLowerCase()));
             }
 
             function goBack() {
@@ -255,23 +224,74 @@
                     const waMsg = encodeURIComponent(`Hello Sound Bazz! I am interested in purchasing ${p.name}. Please share details and pricing.`);
                     productsGrid.innerHTML += `
                     <div class="glass-card rounded-3xl overflow-hidden hover-glow transition-all duration-500 flex flex-col group">
-                        <div class="h-52 overflow-hidden relative">
-                        <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover transition-all duration-700 transform group-hover:scale-105" loading="lazy">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <span class="absolute top-4 left-4 ${p.badgeColor} text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">${p.badge}</span>
+                        <div class="h-52 overflow-hidden relative cursor-pointer" onclick="openSpecModal('${p.id}')">
+                            <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover transition-all duration-700 transform group-hover:scale-105" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                            <span class="absolute top-4 left-4 ${p.badgeColor} text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">${p.badge}</span>
+                            <span class="absolute bottom-3 right-3 text-rose-300 bg-black/60 backdrop-blur-md text-[11px] font-medium px-2.5 py-1 rounded-lg border border-rose-500/20 opacity-0 group-hover:opacity-100 transition-opacity">Quick Specs →</span>
                         </div>
-                        <div class="p-7 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-white mb-6 brand-font">${p.name}</h3>
-                        <div class="grid grid-cols-2 gap-3 mt-auto">
-                            <a href="tel:${CALL_NUM}" class="glass-card py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl text-white hover:bg-white/5 transition-colors text-center flex items-center justify-center gap-2">${PHONE_SVG}Call</a>
-                            <a href="https://wa.me/${WA_NUM}?text=${waMsg}" target="_blank" class="bg-green-600/90 hover:bg-green-500 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl text-white transition-colors text-center flex items-center justify-center gap-2">${WA_SVG}WhatsApp</a>
-                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <a href="product.html?id=${p.id}" class="group-hover:text-rose-400 transition-colors">
+                                <h3 class="text-xl font-bold text-white mb-2 brand-font">${p.name}</h3>
+                            </a>
+                            <p class="text-zinc-400 text-xs mb-4">${p.category}</p>
+                            
+                            <div class="flex flex-col gap-2.5 mt-auto">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <button onclick="openSpecModal('${p.id}')" class="glass-card py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl text-rose-400 hover:bg-rose-500/10 border-rose-500/20 transition-all text-center flex items-center justify-center gap-1.5">
+                                        ${INFO_SVG} Specs
+                                    </button>
+                                    <a href="product.html?id=${p.id}" class="btn-primary text-white py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl transition-all text-center flex items-center justify-center gap-1">
+                                        Details →
+                                    </a>
+                                </div>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <a href="tel:${CALL_NUM}" class="glass-card py-2 text-xs font-bold uppercase tracking-wider rounded-xl text-white hover:bg-white/5 transition-colors text-center flex items-center justify-center gap-1.5">${PHONE_SVG}Call</a>
+                                    <a href="https://wa.me/${WA_NUM}?text=${waMsg}" target="_blank" class="bg-green-600/90 hover:bg-green-500 py-2 text-xs font-bold uppercase tracking-wider rounded-xl text-white transition-colors text-center flex items-center justify-center gap-1.5">${WA_SVG}WhatsApp</a>
+                                </div>
+                            </div>
                         </div>
                     </div>`;
                 });
                 
                 // scroll to top of section
                 document.getElementById('products-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            function openSpecModal(productId) {
+                const product = getProductById(productId);
+                if (!product) return;
+                document.getElementById('modal-img').src = product.img;
+                document.getElementById('modal-brand').textContent = product.brand;
+                document.getElementById('modal-title').textContent = product.name;
+                document.getElementById('modal-subtitle').textContent = product.category + ' • ' + product.price;
+                
+                const caveatContainer = document.getElementById('modal-caveat-container');
+                if (product.caveat && product.caveat.trim() !== '') {
+                    document.getElementById('modal-caveat').textContent = product.caveat;
+                    caveatContainer.classList.remove('hidden');
+                } else {
+                    caveatContainer.classList.add('hidden');
+                }
+
+                document.getElementById('modal-best-for').textContent = product.bestFor;
+                document.getElementById('modal-full-page-btn').href = `product.html?id=${product.id}`;
+
+                const grid = document.getElementById('modal-quick-grid');
+                grid.innerHTML = `
+                    <div class="glass-card p-3 rounded-xl"><span class="text-zinc-500 text-[10px] uppercase block">Key</span><span class="text-white text-xs font-semibold">${product.key}</span></div>
+                    <div class="glass-card p-3 rounded-xl"><span class="text-zinc-500 text-[10px] uppercase block">Holes</span><span class="text-white text-xs font-semibold">${product.holes}</span></div>
+                    <div class="glass-card p-3 rounded-xl"><span class="text-zinc-500 text-[10px] uppercase block">Reeds</span><span class="text-white text-xs font-semibold">${product.reeds}</span></div>
+                    <div class="glass-card p-3 rounded-xl"><span class="text-zinc-500 text-[10px] uppercase block">Reed Material</span><span class="text-white text-xs font-semibold">${product.reedMaterial}</span></div>
+                    <div class="glass-card p-3 rounded-xl"><span class="text-zinc-500 text-[10px] uppercase block">Comb</span><span class="text-white text-xs font-semibold">${product.comb}</span></div>
+                    <div class="glass-card p-3 rounded-xl"><span class="text-zinc-500 text-[10px] uppercase block">Range</span><span class="text-white text-xs font-semibold">${product.range}</span></div>
+                `;
+
+                document.getElementById('spec-modal').classList.remove('hidden');
+            }
+
+            function closeSpecModal() {
+                document.getElementById('spec-modal').classList.add('hidden');
             }
 
             function openProductSection(brandId, brandName) {
@@ -305,7 +325,6 @@
             const initialHash = window.location.hash.substring(1);
             const brandMatch = brands.find(b => b.brandId === initialHash);
             if(brandMatch) {
-                // If they land on a specific hash, replace the history instead of just pushing
                 history.replaceState({view: 'products', brandId: brandMatch.brandId, brandName: brandMatch.name}, '', '#' + brandMatch.brandId);
                 showProducts(brandMatch.brandId, brandMatch.name);
             } else {
@@ -416,5 +435,38 @@
             });
         }
     </script>
+
+    <!-- Specification Quick Modal (Single Page Specs Viewer) -->
+    <div id="spec-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-xl hidden flex items-center justify-center p-4 md:p-6 overflow-y-auto">
+        <div class="glass-card rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 relative border border-rose-500/20 shadow-[0_0_50px_rgba(225,29,72,0.15)] flex flex-col gap-6">
+            <button onclick="closeSpecModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-white p-2 focus:outline-none transition-colors" aria-label="Close Specification Modal">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="flex items-center gap-4">
+                <img id="modal-img" src="" alt="" class="w-20 h-20 object-contain rounded-2xl bg-black/40 p-2 border border-zinc-800">
+                <div>
+                    <span id="modal-brand" class="text-rose-500 font-bold uppercase tracking-widest text-[10px]">Brand</span>
+                    <h3 id="modal-title" class="text-xl md:text-2xl font-bold text-white brand-font">Title</h3>
+                    <p id="modal-subtitle" class="text-zinc-400 text-xs">Category</p>
+                </div>
+            </div>
+            <div id="modal-caveat-container" class="hidden glass-card rounded-2xl p-4 border-l-4 border-l-amber-500 bg-amber-950/20">
+                <p id="modal-caveat" class="text-zinc-300 text-xs leading-relaxed"></p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="modal-quick-grid"></div>
+            <div class="glass-card rounded-2xl p-5 border border-rose-500/10">
+                <h4 class="text-xs font-bold text-rose-400 uppercase tracking-widest mb-2 brand-font">Best Suited For</h4>
+                <p id="modal-best-for" class="text-zinc-300 text-sm font-light leading-relaxed"></p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <a id="modal-full-page-btn" href="#" class="btn-primary text-white py-3 px-6 text-xs font-bold uppercase tracking-wider rounded-xl text-center flex-1">
+                    Open Full Specification Page →
+                </a>
+                <button onclick="closeSpecModal()" class="glass-card text-zinc-300 hover:text-white py-3 px-6 text-xs font-bold uppercase tracking-wider rounded-xl text-center">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
